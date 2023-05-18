@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.GalscowController">
+   <center>
+      <AnchorPane prefHeight="551.0" prefWidth="880.0" style="-fx-background-color: D2EFFC;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="voltarButton" layoutX="725.0" layoutY="489.0" mnemonicParsing="false" onAction="#voltarMenu" text="Logout" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5992ed" height="275.0" layoutX="88.0" layoutY="84.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f67b7d" height="276.0" layoutX="335.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff902a" height="276.0" layoutX="578.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+            <Line endX="100.0" layoutX="188.0" layoutY="144.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="124.0" layoutY="105.0" text="Abertura Ocular" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="435.0" layoutY="144.0" startX="-100.0" stroke="WHITE" />
+            <Line endX="100.0" layoutX="678.0" layoutY="144.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="369.0" layoutY="105.0" text="Resposta Verbal" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="614.0" layoutY="105.0" text="Resposta Motora" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="124.0" layoutY="162.0" mnemonicParsing="false" onAction="#pegaSelecionado" prefHeight="17.0" prefWidth="88.0" stylesheets="@style.css" text="Espontânea" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="aberturaOcular" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="123.0" layoutY="193.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ao chamado" textFill="WHITE" toggleGroup="$aberturaOcular" />
+            <RadioButton layoutX="124.0" layoutY="225.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="À dor" textFill="WHITE" toggleGroup="$aberturaOcular" />
+            <RadioButton layoutX="124.0" layoutY="258.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ausente" textFill="WHITE" toggleGroup="$aberturaOcular" />
+            <RadioButton layoutX="369.0" layoutY="162.0" mnemonicParsing="false" onAction="#pegaSelecionado" prefHeight="17.0" prefWidth="88.0" stylesheets="@style.css" text="Orientado" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="respostaVerbal" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="369.0" layoutY="193.0" mnemonicParsing="false" onAction="#pegaSelecionado" prefHeight="17.0" prefWidth="88.0" stylesheets="@style.css" text="Confuso" textFill="WHITE" toggleGroup="$respostaVerbal" />
+            <RadioButton layoutX="370.0" layoutY="225.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Palavras" textFill="WHITE" toggleGroup="$respostaVerbal" />
+            <RadioButton layoutX="370.0" layoutY="290.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ausente" textFill="WHITE" toggleGroup="$respostaVerbal" />
+            <RadioButton layoutX="370.0" layoutY="258.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Sons incompreensiveis" textFill="WHITE" toggleGroup="$respostaVerbal" />
+            <RadioButton layoutX="611.0" layoutY="162.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Obedece" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="respostaMotora" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="612.0" layoutY="193.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Localiza dor" textFill="WHITE" toggleGroup="$respostaMotora" />
+            <RadioButton layoutX="612.0" layoutY="225.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Movimento de retirada" textFill="WHITE" toggleGroup="$respostaMotora" />
+            <RadioButton layoutX="612.0" layoutY="258.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Flexão Anormal" textFill="WHITE" toggleGroup="$respostaMotora" />
+            <RadioButton layoutX="612.0" layoutY="290.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Extensão anormal" textFill="WHITE" toggleGroup="$respostaMotora" />
+            <RadioButton layoutX="613.0" layoutY="322.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ausente" textFill="WHITE" toggleGroup="$respostaMotora" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cd150" height="89.0" layoutX="90.0" layoutY="425.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="449.0" />
+            <Label layoutX="91.0" layoutY="401.0" text="A escala varia de 1 a 15 pontos" textFill="#004655">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="gcsResultado" layoutX="124.0" layoutY="456.0" prefHeight="42.0" prefWidth="232.0" text="Preencha os dados!" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="101.0" layoutY="435.0" text="Resultado:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="gcsValores" layoutX="375.0" layoutY="456.0" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="335.0" layoutY="66.0">
+               <image>
+                  <Image url="@../../../img/boca.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="88.0" layoutY="67.0">
+               <image>
+                  <Image url="@../../../img/eye.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="578.0" layoutY="67.0">
+               <image>
+                  <Image url="@../../../img/hand.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
