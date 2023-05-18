@@ -68,10 +68,10 @@ public class GalscowController {
         int valorRespostaMotora = 0;
         switch (r3.getText()) {
             case "Obedece" -> valorRespostaMotora = 6;
-            case "Localiza" -> valorRespostaMotora = 5;
-            case "Flete" -> valorRespostaMotora = 4;
+            case "Localiza dor" -> valorRespostaMotora = 5;
+            case "Movimento de retirada" -> valorRespostaMotora = 4;
             case "Flexão Anormal" -> valorRespostaMotora = 3;
-            case "Extensão" -> valorRespostaMotora = 2;
+            case "Extensão Anormal" -> valorRespostaMotora = 2;
             case "Ausente" -> valorRespostaMotora = 1;
         }
 
