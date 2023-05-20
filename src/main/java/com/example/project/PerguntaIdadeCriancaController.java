@@ -14,12 +14,12 @@ public class PerguntaIdadeCriancaController {
 
     @FXML Button voltarButton;
 
-    public void irEscalaBebe() {
-        //Application.setRoot("");
+    public void irEscalaBebe() throws IOException {
+        Application.setRoot("glasgowBebe");
     }
 
-    public void irEscalaCrianca() {
-        //Application.setRoot("");
+    public void irEscalaCrianca() throws IOException {
+        Application.setRoot("glasgowCrianca");
     }
 
     public void voltarMenu() throws IOException {

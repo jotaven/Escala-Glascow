@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class GlasgowController {
+public class GlasgowCriancaController {
     @FXML
     public Button resetButton;
 
@@ -168,6 +168,6 @@ public class GlasgowController {
 
     @FXML
     public void voltarMenu() throws IOException {
-        Application.setRoot("menu");
+        Application.setRoot("PerguntaIdadeCrianca");
     }
 }
