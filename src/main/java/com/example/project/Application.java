@@ -3,6 +3,7 @@ package com.example.project;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,9 +15,9 @@ public class Application extends javafx.application.Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("login"), 900, 600);
+        scene = new Scene(loadFXML("login"), 1115, 635);
         stage.setScene(scene);
-        stage.setTitle("Escala de coma de Glascow ");
+        stage.setTitle("Escala de coma de Glasgow");
         stage.show();
     }
 

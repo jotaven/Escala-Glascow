@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1115.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.PerguntaIdadeCriancaController">
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #6DB8BD;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="320.0" layoutY="42.0" text="Qual a idade da criança?" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="40.0" />
+                    </font>
+                    <effect>
+                        <DropShadow height="3.42" offsetY="2.0" radius="1.21" width="3.42">
+                            <color>
+                                <Color red="0.30588236451148987" green="0.545098066329956" blue="0.5529412031173706" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Label>
+            <ImageView fitHeight="266.0" fitWidth="266.0" layoutX="206.0" layoutY="180.0">
+               <image>
+                  <Image url="@../../../img/bebe.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="286.0" fitWidth="286.0" layoutX="630.0" layoutY="167.0">
+               <image>
+                  <Image url="@../../../img/crianca.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="292.0" layoutY="480.0" text="Bebê" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <effect>
+                  <DropShadow height="3.42" offsetY="2.0" radius="1.21" width="3.42">
+                     <color>
+                        <Color red="0.3044590651988983" green="0.5443591475486755" blue="0.5526315569877625" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Line endX="-100.0" endY="258.0" layoutX="656.0" layoutY="193.0" startX="-100.0" startY="-22.0" stroke="#e9fcff" />
+            <Label layoutX="704.0" layoutY="480.0" text="Criança" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <effect>
+                  <DropShadow height="3.42" offsetY="2.0" radius="1.21" width="3.42">
+                     <color>
+                        <Color red="0.3044590651988983" green="0.5443591475486755" blue="0.5526315569877625" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="296.0" layoutY="525.0" text="(&lt;2 anos)" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow height="3.42" offsetY="2.0" radius="1.21" width="3.42">
+                     <color>
+                        <Color red="0.3044590651988983" green="0.5443591475486755" blue="0.5526315569877625" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="731.0" layoutY="525.0" text="( 2+ anos)" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow height="3.42" offsetY="2.0" radius="1.21" width="3.42">
+                     <color>
+                        <Color red="0.3044590651988983" green="0.5443591475486755" blue="0.5526315569877625" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Button fx:id="bebeButton" layoutX="200.0" layoutY="150.0" mnemonicParsing="false" onAction="#irEscalaBebe" opacity="0.0" prefHeight="415.0" prefWidth="278.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="criancaButton" layoutX="634.0" layoutY="150.0" mnemonicParsing="false" onAction="#irEscalaBebe" opacity="0.0" prefHeight="415.0" prefWidth="278.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="voltarButton" layoutX="6.0" mnemonicParsing="false" onAction="#voltarMenu" style="-fx-background-color: none; -fx-padding: 5;" text="←" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="3.41" offsetX="2.0" offsetY="1.0" radius="1.205" width="3.41">
+                     <color>
+                        <Color red="0.30588236451148987" green="0.545098066329956" blue="0.5529412031173706" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

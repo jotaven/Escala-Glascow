@@ -31,3 +31,14 @@
     -fx-padding: 6px;
 }
 
+.info {
+    -fx-border-radius: 100;
+    -fx-border-color: #004655;
+    -fx-padding: -2px;
+    -fx-start-margin: 0;
+    -fx-background-color: #D2EFFC;
+}
+
+.loginButton:hover {
+    -fx-background-color: #ff0000;
+}

@@ -29,7 +29,7 @@ public class LoginController {
     private void checkLogin() throws IOException {
         if (username.getText().equals("dino") && password.getText().equals("123")) {
             loginError.setText("Success!");
-            Application.setRoot("glascow");
+            Application.setRoot("menu");
 
 
         } else {
