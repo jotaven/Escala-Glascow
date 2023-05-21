@@ -119,28 +119,34 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></RadioButton>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cd150" height="89.0" layoutX="90.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="449.0" />
-            <Label layoutX="91.0" layoutY="455.0" text="A escala varia de 0 a 15 pontos" textFill="#004655">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cd150" height="118.0" layoutX="90.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="593.0" />
+            <Label layoutX="91.0" layoutY="455.0" text="A escala varia de 1 a 15 pontos" textFill="#004655">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="gcsResultado" layoutX="124.0" layoutY="510.0" prefHeight="42.0" prefWidth="232.0" text="Preencha os dados!" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="gcsResultado" alignment="CENTER" layoutX="104.0" layoutY="519.0" prefHeight="42.0" prefWidth="174.0" text="Preencha os dados!" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="101.0" layoutY="489.0" text="Resultado:" textFill="WHITE">
+            <Label fx:id="resultadoLabel" layoutX="150.0" layoutY="492.0" text="Resultado:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="gcsValores" layoutX="277.0" layoutY="510.0" prefHeight="27.0" prefWidth="250.0" textFill="WHITE">
+            <Label fx:id="gcsValores" layoutX="113.0" layoutY="552.0" prefHeight="27.0" prefWidth="164.0" textFill="WHITE">
                <font>
-                  <Font name="SansSerif Bold" size="24.0" />
+                  <Font name="SansSerif Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="resetButton" layoutX="971.0" layoutY="540.0" mnemonicParsing="false" onAction="#resetButtonOnAction" text="Resetar" />
+            <Button fx:id="resetButton" layoutX="692.0" layoutY="481.0" mnemonicParsing="false" onAction="#resetButtonOnAction" prefHeight="29.0" prefWidth="29.0" style="-fx-background-radius: 15px; -fx-background-color: def1f9; -fx-border-radius: 15px; -fx-border-color: black; -fx-padding: 0;" text="⟳" textFill="#004655">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Button fx:id="infoEscala" layoutX="298.0" layoutY="461.0" mnemonicParsing="false" onAction="#mostrarDetalhesEscala" prefHeight="9.0" prefWidth="9.0" styleClass="info" stylesheets="@style.css" text="?" textFill="#004655">
                <font>
                   <Font size="7.0" />
@@ -217,6 +223,43 @@
                      </color>
                   </DropShadow>
                </effect>
+            </Label>
+            <Label layoutX="345.0" layoutY="492.0" prefHeight="18.0" prefWidth="87.0" text="Mortalidade" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="510.0" layoutY="492.0" prefHeight="18.0" prefWidth="159.0" text="Resultado desfavorável" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="313.0" layoutY="508.0" prefHeight="17.0" prefWidth="152.0" text=" 6 meses após a lesão:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="512.0" layoutY="508.0" prefHeight="17.0" prefWidth="152.0" text=" 6 meses após a lesão:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="-100.0" endY="100.0" layoutX="390.0" layoutY="496.0" startX="-100.0" startY="-17.0" stroke="#009e18" />
+            <Line endX="-100.0" endY="100.0" layoutX="590.0" layoutY="497.0" startX="-100.0" startY="-18.0" stroke="#009e18" />
+            <Label fx:id="resultadoMortalidadeLabel" alignment="CENTER" layoutX="335.0" layoutY="530.0" prefHeight="45.0" prefWidth="107.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="resultadoDesfavoravelLabel" layoutX="535.0" layoutY="530.0" prefHeight="45.0" prefWidth="107.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="resultadoLabel1" layoutX="163.0" layoutY="506.0" text="GSC-P" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
             </Label>
          </children>
       </AnchorPane>

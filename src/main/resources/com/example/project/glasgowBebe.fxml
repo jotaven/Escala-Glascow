@@ -1,14 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.project.GlasgowBebeController"
-            prefHeight="635.0" prefWidth="1115.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="1115.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.GlasgowBebeController">
+    <center>
+        <AnchorPane prefHeight="577.0" prefWidth="1100.0" style="-fx-background-color: D2EFFC;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="voltarButton" layoutX="8.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="44.0" prefWidth="31.0" style="-fx-background-color: none; -fx-padding: 5;" text="←" textFill="#00446f">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></Button>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5992ed" height="275.0" layoutX="87.0" layoutY="149.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f67b7d" height="276.0" layoutX="335.0" layoutY="148.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff902a" height="276.0" layoutX="578.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+                <Line endX="100.0" layoutX="187.0" layoutY="209.0" startX="-100.0" stroke="WHITE" />
+                <Label layoutX="123.0" layoutY="170.0" text="Abertura Ocular" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Line endX="100.0" layoutX="435.0" layoutY="209.0" startX="-100.0" stroke="WHITE" />
+                <Line endX="100.0" layoutX="678.0" layoutY="207.0" startX="-100.0" stroke="WHITE" />
+                <Label layoutX="369.0" layoutY="170.0" text="Resposta Verbal" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="614.0" layoutY="168.0" text="Resposta Motora" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <RadioButton layoutX="115.0" layoutY="227.0" mnemonicParsing="false" onAction="#pegaSelecionado" prefHeight="17.0" prefWidth="88.0" stylesheets="@style.css" text="Espontânea" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="aberturaOcular" />
+                    </toggleGroup>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </RadioButton>
+                <RadioButton layoutX="114.0" layoutY="258.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ao chamado" textFill="WHITE" toggleGroup="$aberturaOcular">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="115.0" layoutY="290.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="À dor" textFill="WHITE" toggleGroup="$aberturaOcular">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="115.0" layoutY="323.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ausente" textFill="WHITE" toggleGroup="$aberturaOcular">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="363.0" layoutY="227.0" mnemonicParsing="false" onAction="#pegaSelecionado" prefHeight="17.0" prefWidth="128.0" stylesheets="@style.css" text="Murmúrio, balbucia" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="respostaVerbal" />
+                    </toggleGroup>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </RadioButton>
+                <RadioButton layoutX="363.0" layoutY="258.0" mnemonicParsing="false" onAction="#pegaSelecionado" prefHeight="17.0" prefWidth="118.0" stylesheets="@style.css" text="Choro, irritação" textFill="WHITE" toggleGroup="$respostaVerbal">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="364.0" layoutY="290.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Choro à dor" textFill="WHITE" toggleGroup="$respostaVerbal">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="364.0" layoutY="355.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ausente" textFill="WHITE" toggleGroup="$respostaVerbal">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="364.0" layoutY="323.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Gemido à dor" textFill="WHITE" toggleGroup="$respostaVerbal">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="608.0" layoutY="225.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Movimentos espontâneos" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="respostaMotora" />
+                    </toggleGroup>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </RadioButton>
+                <RadioButton layoutX="608.0" layoutY="256.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Retira ao toque" textFill="WHITE" toggleGroup="$respostaMotora">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="608.0" layoutY="288.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Retira à dor" textFill="WHITE" toggleGroup="$respostaMotora">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="608.0" layoutY="321.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Flexão anormal" textFill="WHITE" toggleGroup="$respostaMotora">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="608.0" layoutY="353.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Extensão anormal" textFill="WHITE" toggleGroup="$respostaMotora">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="608.0" layoutY="385.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ausente" textFill="WHITE" toggleGroup="$respostaMotora">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cd150" height="89.0" layoutX="90.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="449.0" />
+                <Label layoutX="91.0" layoutY="455.0" text="A escala varia de 1 a 15 pontos" textFill="#004655">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="gcsResultado" layoutX="116.0" layoutY="505.0" prefHeight="42.0" prefWidth="232.0" text="Preencha os dados!" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Comic Sans MS Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="101.0" layoutY="489.0" text="Resultado:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="gcsValores" layoutX="277.0" layoutY="510.0" prefHeight="27.0" prefWidth="250.0" textFill="WHITE">
+                    <font>
+                        <Font name="SansSerif Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Button fx:id="resetButton" layoutX="971.0" layoutY="540.0" mnemonicParsing="false" onAction="#resetButtonOnAction" text="Resetar" />
+                <Button fx:id="infoEscala" layoutX="298.0" layoutY="461.0" mnemonicParsing="false" onAction="#mostrarDetalhesEscala" prefHeight="9.0" prefWidth="9.0" styleClass="info" stylesheets="@style.css" text="?" textFill="#004655">
+                    <font>
+                        <Font size="7.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#36ae96" height="276.0" layoutX="826.0" layoutY="148.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+                <Line endX="100.0" layoutX="926.0" layoutY="208.0" startX="-100.0" stroke="WHITE" />
+                <Label layoutX="863.0" layoutY="169.0" text="Resposta Pupilar" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <RadioButton layoutX="855.0" layoutY="226.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Reativiade Bilateral" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="respostaPupilar" />
+                    </toggleGroup>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </RadioButton>
+                <RadioButton layoutX="855.0" layoutY="257.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Unilateral" textFill="WHITE" toggleGroup="$respostaPupilar">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <RadioButton layoutX="855.0" layoutY="289.0" mnemonicParsing="false" onAction="#pegaSelecionado" stylesheets="@style.css" text="Ausente" textFill="WHITE" toggleGroup="$respostaPupilar">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></RadioButton>
+                <Label layoutX="83.0" layoutY="39.0" text="Escala de coma de Glasgow" textFill="#00446f">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Label>
+                <Button fx:id="infoGlascow" layoutX="551.0" layoutY="58.0" mnemonicParsing="false" onAction="#mostrarDetalhesGlasgow" prefHeight="19.0" prefWidth="19.0" styleClass="info" stylesheets="@style.css" text="?" textFill="#004655">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5992ed" height="34.0" layoutX="87.0" layoutY="132.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+                <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="93.0" layoutY="138.0">
+                    <image>
+                        <Image url="@../../../img/eye.png" />
+                    </image>
+                </ImageView>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f67b7d" height="34.0" layoutX="335.0" layoutY="132.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+                <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="340.0" layoutY="136.0">
+                    <image>
+                        <Image url="@../../../img/boca.png" />
+                    </image>
+                </ImageView>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff902a" height="34.0" layoutX="578.0" layoutY="133.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+                <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="583.0" layoutY="137.0">
+                    <image>
+                        <Image url="@../../../img/hand.png" />
+                    </image>
+                </ImageView>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#36ae96" height="34.0" layoutX="826.0" layoutY="133.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="833.0" layoutY="139.0">
+                    <image>
+                        <Image url="@../../../img/pupila.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="85.0" layoutY="78.0" text="Para Bebês" textFill="#ff5a5a">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow height="3.41" offsetX="2.0" radius="1.205" width="3.41">
+                            <color>
+                                <Color red="1.0" green="0.7777777910232544" blue="0.9666666388511658" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

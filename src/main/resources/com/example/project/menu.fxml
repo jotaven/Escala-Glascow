@@ -20,7 +20,7 @@
                   <Image url="@../../../img/doutora.png" />
                </image>
             </ImageView>
-            <Label layoutX="64.0" layoutY="59.0" text="Bem vindo (Usuário)!" textFill="WHITE">
+            <Label layoutX="64.0" layoutY="59.0" text="Bem vindo Doutor(a)!" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="40.0" />
                </font>

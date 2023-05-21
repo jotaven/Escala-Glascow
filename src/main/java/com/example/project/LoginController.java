@@ -1,5 +1,7 @@
 package com.example.project;
 
+import java.sql.*;
+
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,28 +18,43 @@ public class LoginController {
     private Label loginError;
 
     @FXML
-    private TextField username;
+    private TextField usernameField;
 
     @FXML
-    private PasswordField password;
+    private PasswordField passwordField;
+
+    Connection con;
+    PreparedStatement pst;
+    ResultSet rs;
 
     @FXML
     protected void userLogin() throws IOException {
-        checkLogin();
-    }
+        String username = usernameField.getText();
+        String password = passwordField.getText();
 
-    private void checkLogin() throws IOException {
-        if (username.getText().equals("dino") && password.getText().equals("123")) {
-            loginError.setText("Success!");
-            Application.setRoot("menu");
+        if (username.isEmpty() || password.isEmpty()) {
+            loginError.setText("Preencha os campos vazios!");
+            return;
+        }
 
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginfx", "root", "");
 
-        } else {
-            if (username.getText().isEmpty() || password.getText().isEmpty()) {
-                loginError.setText("Preencha os campos vazios!");
+            pst = con.prepareStatement("SELECT * FROM usuarios WHERE usuario = ? and senha = ?");
+            pst.setString(1, username);
+            pst.setString(2, password);
+
+            rs = pst.executeQuery();
+
+            if (rs.next()) {
+                Application.setRoot("menu");
             } else {
                 loginError.setText("Login ou senha inválidos!");
             }
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

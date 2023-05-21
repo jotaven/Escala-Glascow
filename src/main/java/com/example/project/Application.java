@@ -3,6 +3,7 @@ package com.example.project;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -17,7 +18,12 @@ public class Application extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("login"), 1115, 635);
         stage.setScene(scene);
+        stage.setResizable(false);
+
         stage.setTitle("Escala de coma de Glasgow");
+
+        stage.getIcons().add(new Image("file:src/main/resources/img/icon.png"));
+
         stage.show();
     }
 

@@ -63,7 +63,7 @@
                   </DropShadow>
                </effect>
             </Label>
-            <Label layoutX="296.0" layoutY="525.0" text="(&lt;2 anos)" textFill="WHITE">
+            <Label layoutX="293.0" layoutY="525.0" text="( ≤ 2 anos )" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -75,7 +75,7 @@
                   </DropShadow>
                </effect>
             </Label>
-            <Label layoutX="731.0" layoutY="525.0" text="( 2+ anos)" textFill="WHITE">
+            <Label layoutX="731.0" layoutY="525.0" text="( 2+ anos )" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -87,12 +87,12 @@
                   </DropShadow>
                </effect>
             </Label>
-            <Button fx:id="bebeButton" layoutX="200.0" layoutY="150.0" mnemonicParsing="false" onAction="#irEscalaBebe" opacity="0.0" prefHeight="415.0" prefWidth="278.0">
+            <Button fx:id="bebeButton" layoutX="202.0" layoutY="153.0" mnemonicParsing="false" onAction="#irEscalaBebe" opacity="0.0" prefHeight="410.0" prefWidth="278.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="criancaButton" layoutX="634.0" layoutY="150.0" mnemonicParsing="false" onAction="#irEscalaCrianca" opacity="0.0" prefHeight="415.0" prefWidth="278.0">
+            <Button fx:id="criancaButton" layoutX="635.0" layoutY="151.0" mnemonicParsing="false" onAction="#irEscalaCrianca" opacity="0.0" prefHeight="415.0" prefWidth="278.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

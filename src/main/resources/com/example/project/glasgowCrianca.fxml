@@ -120,7 +120,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor></RadioButton>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2cd150" height="89.0" layoutX="90.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="449.0" />
-                <Label layoutX="91.0" layoutY="455.0" text="A escala varia de 0 a 15 pontos" textFill="#004655">
+                <Label layoutX="91.0" layoutY="455.0" text="A escala varia de 1 a 15 pontos" textFill="#004655">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>

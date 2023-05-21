@@ -24,8 +24,13 @@ public class GlasgowController {
     private Label gcsValores;
 
     @FXML
-    private Button voltarButton;
+    private Label resultadoDesfavoravelLabel;
 
+    @FXML
+    private Label resultadoMortalidadeLabel;
+
+    @FXML
+    private Button voltarButton;
 
     @FXML
     private Button infoEscala;
@@ -106,6 +111,75 @@ public class GlasgowController {
 
         int somaCriterios = valorAberturaOcular + valorRespostaVerbal + valorRespostaMotora - valorRespostaPupilar;
 
+        double porcentagemMortalidade = 0;
+        double porcentagemDesfavoravel = 0;
+
+        switch (somaCriterios) {
+            case 1 -> {
+                porcentagemMortalidade = 74.45;
+                porcentagemDesfavoravel = 89.59;
+            }
+            case 2 -> {
+                porcentagemMortalidade = 64.62;
+                porcentagemDesfavoravel = 85.22;
+            }
+            case 3 -> {
+                porcentagemMortalidade = 40.92;
+                porcentagemDesfavoravel = 65.53;
+            }
+            case 4 -> {
+                porcentagemMortalidade = 39.47;
+                porcentagemDesfavoravel = 68.90;
+            }
+            case 5 -> {
+                porcentagemMortalidade = 32.57;
+                porcentagemDesfavoravel = 57.75;
+            }
+            case 6 -> {
+                porcentagemMortalidade = 24.97;
+                porcentagemDesfavoravel = 46.26;
+            }
+            case 7 -> {
+                porcentagemMortalidade = 19.17;
+                porcentagemDesfavoravel = 37.20;
+            }
+            case 8 -> {
+                porcentagemMortalidade = 20.04;
+                porcentagemDesfavoravel = 33.55;
+            }
+            case 9 -> {
+                porcentagemMortalidade = 18.75;
+                porcentagemDesfavoravel = 30.32;
+            }
+            case 10 -> {
+                porcentagemMortalidade = 17.35;
+                porcentagemDesfavoravel = 28.88;
+            }
+            case 11 -> {
+                porcentagemMortalidade = 11.60;
+                porcentagemDesfavoravel = 21.81;
+            }
+            case 12 -> {
+                porcentagemMortalidade = 9.43;
+                porcentagemDesfavoravel = 19.92;
+            }
+            case 13 -> {
+                porcentagemMortalidade = 7.07;
+                porcentagemDesfavoravel = 15.58;
+            }
+            case 14 -> {
+                porcentagemMortalidade = 5.64;
+                porcentagemDesfavoravel = 14.39;
+            }
+            case 15 -> {
+                porcentagemMortalidade = 2.54;
+                porcentagemDesfavoravel = 11.75;
+            }
+        }
+
+        resultadoDesfavoravelLabel.setText(porcentagemDesfavoravel + "%");
+        resultadoMortalidadeLabel.setText(porcentagemMortalidade + "%");
+
         String mensagemResultado;
         mensagemResultado = somaCriterios + " Pontos.";
 
@@ -132,6 +206,8 @@ public class GlasgowController {
 
         gcsResultado.setText("Preencha os dados!");
         gcsValores.setText("");
+        resultadoMortalidadeLabel.setText("");
+        resultadoDesfavoravelLabel.setText("");
     }
 
     @FXML
