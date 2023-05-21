@@ -39,9 +39,9 @@ public class LoginController {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginfx", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/loginfx", "root", "1234");
 
-            pst = con.prepareStatement("SELECT * FROM usuarios WHERE usuario = ? and senha = ?");
+            pst = con.prepareStatement("SELECT * FROM usuarios WHERE login = ? and senha = ?");
             pst.setString(1, username);
             pst.setString(2, password);
 
@@ -53,8 +53,9 @@ public class LoginController {
                 loginError.setText("Login ou senha inválidos!");
             }
 
-        } catch (Exception e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
+            loginError.setText("Falha ao conectar com a database");
         }
     }
 }

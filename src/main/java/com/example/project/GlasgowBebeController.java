@@ -155,9 +155,10 @@ public class GlasgowBebeController {
     public void mostrarDetalhesGlasgow() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("infoGlasgow.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            Scene scene = new Scene(fxmlLoader.load(), 700, 700);
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setResizable(false);
             stage.setTitle("Informações");
             stage.setScene(scene);
             stage.show();

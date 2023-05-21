@@ -49,7 +49,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Label fx:id="loginError" layoutX="92.0" layoutY="345.0" prefHeight="17.0" prefWidth="155.0" textAlignment="CENTER" textFill="RED" />
+                <Label fx:id="loginError" layoutX="92.0" layoutY="345.0" prefHeight="17.0" prefWidth="221.0" textAlignment="CENTER" textFill="RED" />
             <PasswordField fx:id="passwordField" layoutX="90.0" layoutY="302.0" prefHeight="35.0" prefWidth="223.0" promptText="Senha" />
             </children>
         </AnchorPane>
