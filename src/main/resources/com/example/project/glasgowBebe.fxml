@@ -140,7 +140,13 @@
                         <Font name="SansSerif Bold" size="24.0" />
                     </font>
                 </Label>
-                <Button fx:id="resetButton" layoutX="971.0" layoutY="540.0" mnemonicParsing="false" onAction="#resetButtonOnAction" text="Resetar" />
+                <Button fx:id="resetButton" layoutX="546.0" layoutY="480.0" mnemonicParsing="false" onAction="#resetButtonOnAction" prefHeight="29.0" prefWidth="29.0" style="-fx-background-radius: 15px; -fx-background-color: def1f9; -fx-border-radius: 15px; -fx-border-color: black; -fx-padding: 0;" text="⟳" textFill="#004655">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
                 <Button fx:id="infoEscala" layoutX="298.0" layoutY="461.0" mnemonicParsing="false" onAction="#mostrarDetalhesEscala" prefHeight="9.0" prefWidth="9.0" styleClass="info" stylesheets="@style.css" text="?" textFill="#004655">
                     <font>
                         <Font size="7.0" />

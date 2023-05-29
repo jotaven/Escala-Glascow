@@ -26,7 +26,6 @@ public class GlasgowCriancaController {
     @FXML
     private Button voltarButton;
 
-
     @FXML
     private Button infoEscala;
 
@@ -44,8 +43,6 @@ public class GlasgowCriancaController {
 
     @FXML
     private ToggleGroup respostaPupilar;
-
-
 
 
     @FXML
